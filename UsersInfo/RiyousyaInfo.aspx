@@ -88,7 +88,7 @@ float:left;
                 <asp:Button ID="bt_UpdateBaseUserInfo" runat="server" Enabled="False" OnClick="bt_UpdateBaseUserInfo_Click" Text="利用者情報更新" />
                 <br />
                 <br />
-                <asp:Label ID="Label3" runat="server" Text="利用者情報" Font-Bold="True" Font-Size="XX-Large" ForeColor="#FF3300"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="利用者情報" Font-Bold="True" Font-Size="XX-Large" ForeColor="White"></asp:Label>
             </asp:Panel>
             <asp:Panel ID="userface" runat="server" Height="70px" Width="90px" BorderStyle="Double">
                 <asp:Image ID="img_userface" runat="server" Height="70px" Width="89px" />
@@ -237,6 +237,7 @@ float:left;
         <br />
         <asp:Panel ID="footer" runat="server" Height="90px" Width="1200px">
             <asp:Button ID="Btn_EditBarthelInfo" runat="server" Text="バーセル登録" Font-Bold="True" Font-Size="Large" Height="83px" OnClick="Btn_EditBarthelInfo_Click" Width="123px" />
+            <asp:Button ID="Btn_EditFurnitureInfo" runat="server" Font-Bold="True" Font-Size="Large" Height="83px" OnClick="Btn_EditFurnitureInfo_Click" Text="利用設備" Width="123px" />
         </asp:Panel>
         <br />
         <br />

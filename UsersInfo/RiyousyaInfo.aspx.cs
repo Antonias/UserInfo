@@ -392,19 +392,7 @@ namespace UsersInfo
 
         protected void CB_UnlockBaseUseInfo_CheckedChanged(object sender, EventArgs e)
         {
-            if(CB_UnlockBaseUseInfo.Checked == true)
-            {
-                TB_BirthDay.Enabled = false;
-                TB_HeyaBan.Enabled = false;
-                bt_UpdateBaseUserInfo.Enabled = false;
-            }
-            else
-            {
-                TB_BirthDay.Enabled = true;
-                TB_HeyaBan.Enabled = true;
-                bt_UpdateBaseUserInfo.Enabled = true;
-            }
-
+            lockBaseUserInfo();
         }
 
         protected void bt_UpdateBaseUserInfo_Click(object sender, EventArgs e)
@@ -423,7 +411,34 @@ namespace UsersInfo
             clsdb.ExecuteSQL(sql);
             clsdb.closedb();
 
-            //this.CB_UnlockBaseUseInfo.
+            WriteBaseUseInfo(id);
+            this.CB_UnlockBaseUseInfo.Checked = true;
+            lockBaseUserInfo();
+        }
+
+        private void lockBaseUserInfo()
+        {
+            if (CB_UnlockBaseUseInfo.Checked == true)
+            {
+                TB_BirthDay.Enabled = false;
+                TB_HeyaBan.Enabled = false;
+                bt_UpdateBaseUserInfo.Enabled = false;
+            }
+            else
+            {
+                TB_BirthDay.Enabled = true;
+                TB_HeyaBan.Enabled = true;
+                bt_UpdateBaseUserInfo.Enabled = true;
+            }
+
+        }
+
+        protected void Btn_EditFurnitureInfo_Click(object sender, EventArgs e)
+        {
+            string url = "ViewFurnitures.aspx";
+            Type cstype = this.GetType();
+            ClientScriptManager cs = Page.ClientScript;
+            cs.RegisterStartupScript(cstype, "OpenNewWindow", "window.open('" + url + "', null);", true);
         }
     }
 }

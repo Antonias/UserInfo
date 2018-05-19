@@ -82,9 +82,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BarthelIndexQuestion.aspx" />
+    <Content Include="EditFurnitureDetail.aspx" />
+    <Content Include="ViewFurnitures.aspx" />
     <Content Include="UpdateUserInfo.aspx" />
     <Content Include="Web.config" />
-    <Content Include="UsersInfo.aspx" />
     <Content Include="RiyousyaInfo.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +99,20 @@
     <Compile Include="clsBarthelIndex.cs" />
     <Compile Include="clsDataBase.cs" />
     <Compile Include="clsNyusyosyaInfo.cs" />
+    <Compile Include="EditFurnitureDetail.aspx.cs">
+      <DependentUpon>EditFurnitureDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditFurnitureDetail.aspx.designer.cs">
+      <DependentUpon>EditFurnitureDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFurnitures.aspx.cs">
+      <DependentUpon>ViewFurnitures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewFurnitures.aspx.designer.cs">
+      <DependentUpon>ViewFurnitures.aspx</DependentUpon>
+    </Compile>
     <Compile Include="main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdateUserInfo.aspx.cs">
@@ -106,13 +121,6 @@
     </Compile>
     <Compile Include="UpdateUserInfo.aspx.designer.cs">
       <DependentUpon>UpdateUserInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UsersInfo.aspx.cs">
-      <DependentUpon>UsersInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UsersInfo.aspx.designer.cs">
-      <DependentUpon>UsersInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="RiyousyaInfo.aspx.cs">
       <DependentUpon>RiyousyaInfo.aspx</DependentUpon>

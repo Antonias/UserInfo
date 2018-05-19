@@ -12,12 +12,13 @@ namespace UsersInfo
         {
 
 #if debug
+
             return @"Data Source=TANAATU-PC\SQLEXPRESS;"
                     + @"Integrated Security=False;"
                     + @"User ID=sa;"
                     + @"Password=yuto";
 
-#else
+#else   
 
             return @"Data Source=YUTO06;"
                   + @"Integrated Security=False;"

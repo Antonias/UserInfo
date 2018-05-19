@@ -544,6 +544,15 @@ namespace UsersInfo {
         protected global::System.Web.UI.WebControls.Button Btn_EditBarthelInfo;
         
         /// <summary>
+        /// Btn_EditFurnitureInfo コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_EditFurnitureInfo;
+        
+        /// <summary>
         /// ScriptManager1 コントロール。
         /// </summary>
         /// <remarks>
