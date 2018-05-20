@@ -117,24 +117,12 @@ float:left;
         <br />
         <asp:Panel ID="Main" runat="server" CssClass="auto-style1" Height="600px" Width="900px">
             <br />
-            <ajaxToolkit:TabContainer ID="tbc_UserDetail" runat="server" ActiveTabIndex="2" CssClass="auto-style6" Height="600px" Width="900px" BackColor="Silver" BorderColor="Silver" Enabled="False"><ajaxToolkit:TabPanel ID="TabPanel1" runat="server" HeaderText="TabPanel1"><HeaderTemplate>水分摂取量</HeaderTemplate><ContentTemplate><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 　　　　　　　　　　　　 1日合計<br /> <asp:Chart ID="Chart1" runat="server" Height="152px" Width="762px"><Series><asp:Series ChartArea="ChartArea1" ChartType="Line" Name="Series1"></asp:Series></Series><ChartAreas><asp:ChartArea Name="ChartArea1"></asp:ChartArea></ChartAreas></asp:Chart><br />　　　　01:00～02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <br />
-                <asp:Chart ID="cht_wvdetail_1" runat="server" Height="75px" Width="760px">
-                    <Series>
-                        <asp:Series ChartArea="ChartArea1" ChartType="Line" Name="Series1">
-                        </asp:Series>
-                    </Series>
-                    <ChartAreas>
-                        <asp:ChartArea Name="ChartArea1">
-                        </asp:ChartArea>
-                    </ChartAreas>
-                </asp:Chart>
-                <br />
-                　　　　03:00～04:00<br /> <asp:Chart ID="cht_wvdetail_2" runat="server" Height="69px" Width="759px"><Series><asp:Series ChartArea="ChartArea1" ChartType="Line" Name="Series1"></asp:Series></Series><ChartAreas><asp:ChartArea Name="ChartArea1"></asp:ChartArea></ChartAreas></asp:Chart>
-                <br />
-                　　　　05:00～06:00<br /> <asp:Chart ID="cht_wvdetail_3" runat="server" Height="76px" Width="761px"><Series><asp:Series ChartArea="ChartArea1" ChartType="Line" Name="Series1"></asp:Series></Series><ChartAreas><asp:ChartArea Name="ChartArea1"></asp:ChartArea></ChartAreas></asp:Chart>
-                <br />
-                　　　　07:00～08:00<br /> <asp:Chart ID="cht_wvdetail_4" runat="server" Height="71px" Width="765px"><Series><asp:Series ChartArea="ChartArea1" ChartType="Line" Name="Series1"></asp:Series></Series><ChartAreas><asp:ChartArea Name="ChartArea1"></asp:ChartArea></ChartAreas></asp:Chart><br /><br /></ContentTemplate></ajaxToolkit:TabPanel><ajaxToolkit:TabPanel ID="TabPanel2" runat="server" HeaderText="TabPanel2"><HeaderTemplate>利用設備<br /></HeaderTemplate><ContentTemplate>ベッド<br /> <asp:GridView ID="gv_userBedInfo" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="3px" CellPadding="4" Height="16px" Width="666px"><FooterStyle BackColor="White" ForeColor="#333333" /><HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" /><PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" /><RowStyle BackColor="White" ForeColor="#333333" /><SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" /><SortedAscendingCellStyle BackColor="#F7F7F7" /><SortedAscendingHeaderStyle BackColor="#487575" /><SortedDescendingCellStyle BackColor="#E5E5E5" /><SortedDescendingHeaderStyle BackColor="#275353" /></asp:GridView><br /></ContentTemplate></ajaxToolkit:TabPanel><ajaxToolkit:TabPanel ID="TabPanel3" runat="server" HeaderText="TabPanel3" ><HeaderTemplate>バーセルインデックス</HeaderTemplate><ContentTemplate><asp:Table ID="tbl_base_barthelinfo" runat="server"></asp:Table>
+            <ajaxToolkit:TabContainer ID="tbc_UserDetail" runat="server" ActiveTabIndex="0" CssClass="auto-style6" Height="600px" Width="900px" BackColor="Silver" BorderColor="Silver" Enabled="False"><ajaxToolkit:TabPanel ID="TabPanel1" runat="server" HeaderText="TabPanel1"><HeaderTemplate>水分摂取量</HeaderTemplate><ContentTemplate><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 　　　　　　　　　　　　 1日合計<br /> <asp:Chart ID="Chart1" runat="server" Height="472px" Width="762px"><Series><asp:Series ChartArea="ChartArea1" ChartType="Line" Name="Series1" Font="Microsoft Sans Serif, 5.25pt" Legend="Legend1"></asp:Series></Series><ChartAreas><asp:ChartArea Name="ChartArea1"></asp:ChartArea></ChartAreas>
+                <Legends>
+                    <asp:Legend Name="Legend1">
+                    </asp:Legend>
+                </Legends>
+                </asp:Chart><br />　　　　<br /> <br /></ContentTemplate></ajaxToolkit:TabPanel><ajaxToolkit:TabPanel ID="TabPanel2" runat="server" HeaderText="TabPanel2"><HeaderTemplate>利用設備<br /></HeaderTemplate><ContentTemplate>ベッド<br /> <asp:GridView ID="gv_userBedInfo" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="3px" CellPadding="4" Height="16px" Width="666px"><FooterStyle BackColor="White" ForeColor="#333333" /><HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" /><PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" /><RowStyle BackColor="White" ForeColor="#333333" /><SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" /><SortedAscendingCellStyle BackColor="#F7F7F7" /><SortedAscendingHeaderStyle BackColor="#487575" /><SortedDescendingCellStyle BackColor="#E5E5E5" /><SortedDescendingHeaderStyle BackColor="#275353" /></asp:GridView><br /></ContentTemplate></ajaxToolkit:TabPanel><ajaxToolkit:TabPanel ID="TabPanel3" runat="server" HeaderText="TabPanel3" ><HeaderTemplate>バーセルインデックス</HeaderTemplate><ContentTemplate><asp:Table ID="tbl_base_barthelinfo" runat="server"></asp:Table>
                 <br />
                 <asp:Label ID="Label4" runat="server" Text="前回のスコア"></asp:Label>
                 <br />
@@ -181,7 +169,7 @@ float:left;
                     <asp:Button ID="bt_ta" runat="server" OnClick="bt_ta_Click" Text="た" Width="20px" />
                     <asp:Button ID="bt_na" runat="server" OnClick="bt_na_Click" Text="な" Width="20px" />
                     <asp:Button ID="bt_ha" runat="server" OnClick="bt_ha_Click" Text="は" Width="20px" />
-                    <asp:Button ID="bt_ma" runat="server" OnClick="bt_ha_Click" Text="ま" Width="20px" />
+                    <asp:Button ID="bt_ma" runat="server" OnClick="bt_ma_Click" Text="ま" Width="20px" />
                     <asp:Button ID="bt_ya" runat="server" OnClick="bt_ya_Click" Text="や" Width="20px" />
                     <asp:Button ID="bt_ra" runat="server" OnClick="bt_ra_Click" Text="ら" Width="20px" />
                     <asp:Button ID="bt_wa" runat="server" OnClick="bt_wa_Click" Text="わ" Width="20px" />

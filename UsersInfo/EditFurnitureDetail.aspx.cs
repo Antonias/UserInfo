@@ -18,11 +18,24 @@ namespace UsersInfo
                 id = int.Parse(Request.QueryString["id"]);    //クエリ文字列を参照 
                 SqlDataSource1.ConnectionString = main.GetConnectionString();
                 SqlDataSource1.SelectParameters["id"].DefaultValue = id.ToString();
+
+               
             }
         }
 
         protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
         {
+            
+        }
+
+        protected void DV_FurnitureDetail_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+        {
+            
+        }
+
+        protected void DV_FurnitureDetail_ModeChanged(object sender, EventArgs e)
+        {
+           
 
         }
     }

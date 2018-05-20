@@ -211,42 +211,6 @@ namespace UsersInfo {
         protected global::System.Web.UI.DataVisualization.Charting.Chart Chart1;
         
         /// <summary>
-        /// cht_wvdetail_1 コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart cht_wvdetail_1;
-        
-        /// <summary>
-        /// cht_wvdetail_2 コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart cht_wvdetail_2;
-        
-        /// <summary>
-        /// cht_wvdetail_3 コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart cht_wvdetail_3;
-        
-        /// <summary>
-        /// cht_wvdetail_4 コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart cht_wvdetail_4;
-        
-        /// <summary>
         /// TabPanel2 コントロール。
         /// </summary>
         /// <remarks>

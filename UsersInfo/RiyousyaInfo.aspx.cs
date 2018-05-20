@@ -233,19 +233,67 @@ namespace UsersInfo
         {
             DateTime end_dt = DateTime.Today;
             DateTime start_dt = end_dt.AddDays(-1 * calc_count);
+          
+
+            string[] legends = new string[] { "g1", "g2", "g3" , "g4", "g5", "g6", "g7", "g8", "g9","g10", "g11", "g12"}; //凡例
+            Chart1.Series.Clear();  //グラフ初期化
+
+            foreach(var item in legends)
+            {
+                
+                Chart1.Series.Add(item);
+                Chart1.Series[item].ChartType = System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedColumn;
+
+                //Chart1.Series[item].Name = item;
+                
+            }
 
 
-            this.Chart1.Series.Add("series1");
-            Chart1.Series["series1"].XValueType = System.Web.UI.DataVisualization.Charting.ChartValueType.Int32;
-            Chart1.Series["series1"].ChartType = System.Web.UI.DataVisualization.Charting.SeriesChartType.Line;
+            while (start_dt != end_dt)
+            {
+                string str = string.Format("select intake_time_start , intake_time_end , intake_value from [kaigoryoku].[dbo].[T_WaterIntake] " +
+                "where riyousya_id = {0} and intake_day = '{1}' order by intake_time_start", user_id, start_dt);
+                clsDataBase clsdb = new clsDataBase(main.GetConnectionString());
+                SqlDataReader reader = clsdb.GetReader(str);
+                int total_value = 0;
+                int i = 1;
 
-            string str = "select w.intake_day , sum(w.intake_value) from [kaigoryoku].[dbo].[T_WaterIntake] w ";
-            str = str + "group by w.riyousya_id , w.intake_day ";
-            str = str + "having w.riyousya_id = " + user_id;
-            str = str + " and w.intake_day between '" + start_dt + "' and '" + end_dt + "' ";
-            str = str + "order by w.intake_day ";
+                System.Web.UI.DataVisualization.Charting.DataPoint dp = new System.Web.UI.DataVisualization.Charting.DataPoint();
+                while (reader.Read())
+                {
+                    //凡例が無い場合ココで設定
+                    if (string.IsNullOrEmpty(Chart1.Series["g" + i.ToString()].LegendText))
+                    {
+                        Chart1.Series["g" + i.ToString()].LegendText = reader.GetValue(0).ToString();
+                    }
+
+                    dp = new System.Web.UI.DataVisualization.Charting.DataPoint();
+                    dp.SetValueXY(start_dt.ToString(), reader.GetValue(2));
+
+                    
+                    if (reader.GetValue(2).ToString() == "0")
+                    {
+                        dp.IsValueShownAsLabel = false;
+                    }
+                    else
+                    {
+                        dp.IsValueShownAsLabel = true;
+                    }
+                    
+                    Chart1.Series["g" + i.ToString()].Points.Add(dp);
+                    total_value = total_value + int.Parse(reader.GetValue(2).ToString());
+                    i++;
+                }
+
+                
+
+                clsdb.closedb();
+                start_dt = start_dt.AddDays(1);
+            }
+            
 
 
+            /*
             clsDataBase db = new clsDataBase(main.GetConnectionString());
             SqlDataReader reader = db.GetReader(str);
             while (reader.Read())
@@ -257,7 +305,7 @@ namespace UsersInfo
             }
 
             db.closedb();
-
+            */
         }
 
         private void DrowWaterGraph(int calc_count, int user_id, string start_time, System.Web.UI.DataVisualization.Charting.Chart cht)
@@ -331,10 +379,12 @@ namespace UsersInfo
 
             DrowWaterGraph(def_water_calcount, id);
 
+            /*
             DrowWaterGraph(def_water_calcount, id, "01:00:00", this.cht_wvdetail_1);
             DrowWaterGraph(def_water_calcount, id, "03:00:00", this.cht_wvdetail_2);
             DrowWaterGraph(def_water_calcount, id, "05:00:00", this.cht_wvdetail_3);
             DrowWaterGraph(def_water_calcount, id, "07:00:00", this.cht_wvdetail_4);
+            */
         }
 
         protected void Btn_EditBarthelInfo_Click(object sender, EventArgs e)
